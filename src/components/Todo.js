@@ -22,7 +22,7 @@ const Todo = ({title, content, id, setTodo, todos, time}) => {
                 <div className="card__container-true">
                     <div  onClick={cardStateHandler}>
                     <div className="card__header">
-                            <h1>{title} - <span>Done</span></h1>
+                            <h1><span className="content-true"gi>{title}</span> - Done</h1>
                             <p>{time}</p>
                     </div>
                     <p className="content content-true">{content}</p>

@@ -189,6 +189,9 @@ body {
 .content-true {
     text-decoration: line-through;
 }
+.content-true span {
+    text-decoration: none !important;
+}
 .motion__div {
     display: flex;
     justify-content: center;
