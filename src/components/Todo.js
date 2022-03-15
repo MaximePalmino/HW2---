@@ -22,10 +22,10 @@ const Todo = ({title, content, id, setTodo, todos, time}) => {
                 <div className="card__container-true">
                     <div  onClick={cardStateHandler}>
                     <div className="card__header">
-                            <h1>{title} - Complete</h1>
+                            <h1>{title} - <span>Done</span></h1>
                             <p>{time}</p>
                     </div>
-                    <p className="content">{content}</p>
+                    <p className="content content-true">{content}</p>
                     </div>
                     <button class="button-52 todo__button" onClick={deleteTodosHandler}>Delete</button>
                 </div>

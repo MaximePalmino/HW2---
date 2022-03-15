@@ -186,16 +186,28 @@ body {
 .card__container-true:hover {
     cursor: pointer;
 }
-
+.content-true {
+    text-decoration: line-through;
+}
+.motion__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card__container-true {
+    word-break: break-all;
+
     width: 50%;
     background-color: #ffe54c;
+
     margin: 1rem;
     padding: 20px;
     border-radius: 1rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .card__header {
+    word-break: break-all;
+
     display: flex;
     justify-content: space-between;
 }
