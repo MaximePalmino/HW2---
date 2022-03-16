@@ -6,7 +6,7 @@ const Form = ({todo, setTodo}) => {
     function addZero(i) {
         if (i < 10) {i = "0" + i}
         return i;
-      }
+    }
       
     const d = new Date();
     let h = addZero(d.getHours());
@@ -26,8 +26,6 @@ const Form = ({todo, setTodo}) => {
         setContent(e.target.value)
     }
     const submitFormHandler = (e) => {
-
-
         e.preventDefault()
         if (title == '') {
             setErrorTitle('Title is required')
@@ -44,11 +42,11 @@ const Form = ({todo, setTodo}) => {
         <>
             <form>
                 <div className="form__header-container">
-                <h1 className="form__title">My Todo App</h1>
-                <p>This application allows you to create a maximum of 3 tasks for maximum productivity. When a task is finished, you can either delete it or click on it to mark it as "done". Have a nice day!</p>
+                    <h1 className="form__title">My Todo App</h1>
+                    <p>This application allows you to create a maximum of 3 tasks for maximum productivity. When a task is finished, you can either delete it or click on it to mark it as "done". Have a nice day!</p>
                 </div>
                 <div class="form__group field">
-                    <input onChange={titleHandler} type="input" class="form__field" placeholder="Title" name="title" required />
+                    <input onChange={titleHandler} type="input" class="form__field" placeholder={titleHandler} name="title" required />
                     <label for="title" class="form__label">My task*</label>
                     {errorTitle && <div className="error"> {errorTitle} </div>}
                 </div>
