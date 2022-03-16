@@ -7,7 +7,6 @@
 }
 
 body {
-    height: 100vh;
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     font-family: 'Inter', sans-serif;
 }
@@ -54,6 +53,8 @@ body {
     font-family: 'Noto', sans-serif;
     font-weight: lighter;
     width: 80%;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
 }
 
 .form__group {
@@ -238,4 +239,21 @@ body {
     color: #2575fc ;
     font-weight:bold;
 
+}
+
+@media screen and (max-width: 992px) {
+
+    .App {
+        display: inline-block;
+    }
+    .todo__container {
+        width: 100%;
+        display: block;
+    }
+    .motion__div {
+        width: 100%;
+    }
+    .form__container {
+        width: 100%;
+    }
 }
