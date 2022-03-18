@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
-const Todo = ({title, content, id, setTodo, todos, time}) => {
+const Todo = ({title, content, id, setTodo, todos, time, isDone}) => {
 
     const [cardState, setCardState] = useState(false)
 
@@ -11,7 +11,13 @@ const Todo = ({title, content, id, setTodo, todos, time}) => {
         )
     }
     const cardStateHandler = () => {
-        setCardState(!cardState)
+            setCardState(!cardState)
+
+            todos.map((todo) => {if (todo.id == id) {
+                todo.isDone = !todo.isDone
+            }})
+            console.log(todos)
+
     }
 
 
@@ -23,7 +29,7 @@ const Todo = ({title, content, id, setTodo, todos, time}) => {
                     <div  onClick={cardStateHandler}>
                     <div className="card__header">
                             <h1><span className="content-true"gi>{title}</span> - Done</h1>
-                            <p>{time}</p>
+                            <p>{time} {isDone}</p>
                     </div>
                     <p className="content content-true">{content}</p>
                     </div>

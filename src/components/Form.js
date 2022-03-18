@@ -31,7 +31,7 @@ const Form = ({todo, setTodo}) => {
             setErrorTitle('Title is required')
         } else {
             setErrorTitle('')
-            setTodo([...todo, {title: title, content: content, id: Math.random(), time: time}])
+            setTodo([...todo, {title: title, content: content, id: Math.random(), time: time, isDone: false}])
         }
 
     }
